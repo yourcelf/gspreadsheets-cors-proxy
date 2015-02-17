@@ -1,6 +1,7 @@
 {
-  "name": "TimelineJS-editor-proxy",
-  "version": "0.0.0",
+  "name": "Google Spreadsheets CORS Proxy",
+  "version": "0.0.1",
+  "engines": {"node": "0.10.x"},
   "description": "Proxy to enable CORS for the Google Sheets api",
   "main": "index.js",
   "scripts": {
