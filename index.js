@@ -22,7 +22,6 @@ http.createServer(function(req, res) {
   delete req.headers.host;
   proxy.web(req, res, {
     target: 'https://spreadsheets.google.com:443',
-    xfwd: false,
-    hostRewrite: true
+    xfwd: false
   });
 }).listen(process.env.PORT || 5000);
