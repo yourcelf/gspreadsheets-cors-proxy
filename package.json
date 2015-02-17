@@ -1,0 +1,23 @@
+{
+  "name": "TimelineJS-editor-proxy",
+  "version": "0.0.0",
+  "description": "Proxy to enable CORS for the Google Sheets api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourcelf/TimelineJS-editor-proxy.git"
+  },
+  "author": "Charlie DeTar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yourcelf/TimelineJS-editor-proxy/issues"
+  },
+  "homepage": "https://github.com/yourcelf/TimelineJS-editor-proxy",
+  "dependencies": {
+    "http-proxy": "^1.8.1"
+  }
+}
