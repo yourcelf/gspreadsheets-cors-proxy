@@ -13,7 +13,7 @@ var CORS_HEADERS = {
 //var proxy = httpProxy.createProxyServer({target: 'https://spreadsheets.google.com'});
 var proxy = httpProxy.createProxyServer();
 
-https.createServer(function(req, res) {
+http.createServer(function(req, res) {
   if (req.method === 'OPTIONS') {
     // Respond to OPTIONS requests advertising we support full CORS for *
     res.writeHead(200, CORS_HEADERS);
