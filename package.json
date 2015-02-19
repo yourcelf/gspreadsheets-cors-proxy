@@ -1,6 +1,6 @@
 {
-  "name": "Google Spreadsheets CORS Proxy",
-  "version": "0.0.1",
+  "name": "gspreadsheets-cors-proxy",
+  "version": "0.0.2",
   "engines": {"node": "0.10.x"},
   "description": "Proxy to enable CORS for the Google Sheets api",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourcelf/TimelineJS-editor-proxy.git"
+    "url": "https://github.com/yourcelf/gspreadsheets-cors-proxy.git"
   },
   "author": "Charlie DeTar",
   "license": "Mozilla Public License",
   "bugs": {
-    "url": "https://github.com/yourcelf/TimelineJS-editor-proxy/issues"
+    "url": "https://github.com/yourcelf/gspreadsheets-cors-proxy/issues"
   },
-  "homepage": "https://github.com/yourcelf/TimelineJS-editor-proxy",
+  "homepage": "https://github.com/yourcelf/gspreadsheets-cors-proxy",
   "dependencies": {
     "http-proxy": "^1.8.1"
   }
