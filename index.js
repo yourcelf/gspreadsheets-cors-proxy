@@ -10,6 +10,20 @@ var CORS_HEADERS = {
 
 
 var proxy = httpProxy.createProxyServer();
+// Add CORS headers to every other request also.
+proxy.on('proxyRes', function(proxyRes, req, res) {
+  for (var key in CORS_HEADERS) {
+    proxyRes.headers[key] = CORS_HEADERS[key];
+  }
+});
+proxy.on('error', function(err, req, res) {
+  console.log(err);
+  var json = { error: 'proxy_error', reason: err.message };
+  if (!res.headersSent) {
+    res.writeHead(500, {'content-type': 'application/json'});
+  }
+  res.end(JSON.stringify(json));
+});
 http.createServer(function(req, res) {
   if (req.method === 'OPTIONS') {
     // Respond to OPTIONS requests advertising we support full CORS for *
@@ -22,11 +36,5 @@ http.createServer(function(req, res) {
   proxy.web(req, res, {
     target: 'https://spreadsheets.google.com:443',
     xfwd: false
-  });
-  // Add CORS headers to every other request also.
-  proxy.on('proxyRes', function(proxyRes, req, res) {
-    for (var key in CORS_HEADERS) {
-      proxyRes.headers[key] = CORS_HEADERS[key];
-    }
   });
 }).listen(process.env.PORT || 5000);
