@@ -5,7 +5,7 @@ var CORS_HEADERS = {
   'access-control-allow-origin': '*',
   'access-control-allow-methods': 'HEAD, POST, GET, PUT, PATCH, DELETE',
   'access-control-max-age': '86400',
-  'access-control-allow-headers': "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, Authorization"
+  'access-control-allow-headers': "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, Authorization, If-Match"
 };
 
 
